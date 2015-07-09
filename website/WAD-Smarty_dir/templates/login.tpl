@@ -28,11 +28,11 @@
 </tr>
 
 <tr>
-  <td class="template_data"> Gebruikersnaam</td>
+  <td class="template_data"> User</td>
   <td class="template_data"> <input type="text" name="user_name" value="{$default_login}" size="16" maxlength="20"></td>
 </tr>
 <tr>
-  <td class="template_data"> Wachtwoord</td>
+  <td class="template_data"> Password</td>
   <td class="template_data"><input type="password" name="user_password" size=16 maxlength=20></td>
 </tr>
 
