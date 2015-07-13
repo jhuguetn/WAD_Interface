@@ -146,8 +146,8 @@ if ($pk==-1)         //delete
 
 if ($pk==0)   //add
 {
-  $category->assign("title","Nieuwe categorie");
-  $category->assign("header","Nieuwe categorie");
+  $category->assign("title","New category");
+  $category->assign("header","New category");
   $category->assign("submit_value","Add");
 }
 

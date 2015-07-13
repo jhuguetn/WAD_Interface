@@ -40,19 +40,19 @@ $action['Status']['Processor']='../iqc/status-processor.php';
 
 $level['Selector']['Modules']=1;
 $level['Selector']['Config Files']=2;
-$level['Selector']['Categorie']=3;
+$level['Selector']['Category']=3;
 $level['Selector']['Selector']=4;
 
 $action['Selector']['Modules']='../iqc/create_analysemodule.php';
 $action['Selector']['Config Files']='../iqc/create_analysemodule_cfg.php';
-$action['Selector']['Categorie']='../iqc/create_category.php';
+$action['Selector']['Category']='../iqc/create_category.php';
 $action['Selector']['Selector']='../iqc/create_selector.php';
 
 
 $level['Admin']['Users']=1;
-$level['Admin']['DB beheer']=2;
+$level['Admin']['DB management']=2;
 $action['Admin']['Users']='../iqc/create_users.php';
-$action['Admin']['DB beheer']='../iqc/beheer_db.php';
+$action['Admin']['DB management']='../iqc/beheer_db.php';
 
 }
 

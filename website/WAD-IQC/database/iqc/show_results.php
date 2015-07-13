@@ -477,7 +477,7 @@ if ($status_select==5)
   $table_data_valideer = new Smarty_NM();
   
   $action_result_validate=sprintf("validate_results.php?selector_fk=%d&analyse_level=%s&v=%d&t=%d",$selector_fk,$analyse_level,$v,time()); 
-  $table_data_valideer->assign("select_validate","Valideer"); 
+  $table_data_valideer->assign("select_validate","Validate"); 
   $table_data_valideer->assign("action_result_validate",$action_result_validate); 
   
   $menu_valideer=$table_data_valideer->fetch("selector_select_valideer.tpl");

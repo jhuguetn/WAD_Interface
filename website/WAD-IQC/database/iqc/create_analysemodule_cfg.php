@@ -67,7 +67,7 @@ $data->assign("header","Config Files");
 $data->assign("form_action",sprintf("new_analysemodule_cfg.php?pk=-1&t=%d",time() ) );
 $data->assign("file_list",$table_analysemodule_cfg);
 
-$new_analysemodule_cfg=sprintf("<a href=\"new_analysemodule_cfg.php?pk=0&t=%d\">Add new analysemodule_cfg</a>",time());
+$new_analysemodule_cfg=sprintf("<a href=\"new_analysemodule_cfg.php?pk=0&t=%d\">Add new analysis module config</a>",time());
 
 $data->assign("new_file",$new_analysemodule_cfg);
 
