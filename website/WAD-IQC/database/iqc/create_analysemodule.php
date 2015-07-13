@@ -62,8 +62,8 @@ $b=($j%2);
 $result_analysemodule->close();  
 
 $data = new Smarty_NM();
-$data->assign("Title","Analyse Modules");
-$data->assign("header","Analyse Modules");
+$data->assign("Title","Analysis Modules");
+$data->assign("header","Analysis Modules");
 $data->assign("form_action",sprintf("new_analysemodule.php?pk=-1&t=%d",time() ) );
 $data->assign("file_list",$table_analysemodule);
 

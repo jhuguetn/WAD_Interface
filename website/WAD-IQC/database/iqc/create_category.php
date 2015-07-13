@@ -60,8 +60,8 @@ while (($field_category = $result_category->fetch_object()))
 $result_category->close();
 
 $data = new Smarty_NM();
-$data->assign("Title","Selector categorie&euml;n");
-$data->assign("header","Selector categorie&euml;n");
+$data->assign("Title","Selector category");
+$data->assign("header","Selector category");
 $data->assign("form_action",sprintf("new_category.php?pk=-1&t=%d",time() ) );
 $data->assign("category_list",$table_category);
 
