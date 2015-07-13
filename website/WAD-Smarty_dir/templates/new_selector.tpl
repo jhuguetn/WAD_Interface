@@ -36,7 +36,7 @@
     </td>
   </tr>
   <tr>
-    <td class="table_data_blue"> Categorie </td>
+    <td class="table_data_blue"> Category </td>
     <td class="table_data">
          <select name="selector_category">
            {html_options options=$category_options selected=$category_id}
@@ -44,19 +44,19 @@
     </td>
   </tr>
   <tr>
-    <td class="table_data_blue"> Modaliteit </td>
+    <td class="table_data_blue"> Modality </td>
     <td class="table_data">
       <input   name="selector_modality" type="text" value="{$default_selector_modality}" size="50"> </input>
     </td>
   </tr>
   <tr>
-    <td class="table_data_blue"> Lokatie </td>
+    <td class="table_data_blue"> Location </td>
     <td class="table_data">
       <input   name="selector_location" type="text" value="{$default_selector_location}" size="50"> </input>
     </td>
   </tr>
   <tr>
-    <td class="table_data_blue"> QC frequentie </td>
+    <td class="table_data_blue"> QC frequency </td>
     <td class="table_data">
          <select name="selector_qc_frequency">
            {html_options options=$qc_frequency_options selected=$qc_frequency_id}
@@ -70,7 +70,7 @@
 <font class="table_data_blue_header">Selector files</font>
 <table> 
   <tr>
-    <td class="table_data_blue"> Analysemodule </td>
+    <td class="table_data_blue"> Analysis module </td>
     <td class="table_data">
          <select name="analysemodule_pk">
            {html_options options=$analysemodule_options selected=$analysemodule_id}
@@ -78,7 +78,7 @@
     </td>
   </tr>
   <tr>
-    <td class="table_data_blue"> Analysemodule config </td>
+    <td class="table_data_blue"> Analysis module config </td>
     <td class="table_data">
          <select name="analysemodule_cfg_pk">
            {html_options options=$analysemodule_cfg_options selected=$analysemodule_cfg_id}

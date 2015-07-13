@@ -28,7 +28,7 @@ window.onload=checkReloading;
 <table class="table_selectorbar">
 <tr bgcolor="#B8E7FF">
   <td>&nbsp;
-    Periode&nbsp;
+    Period&nbsp;
     <select name="date_filter" onchange="selector_status_drop_list(date_filter.value,status.value,'{$querystring}')" id="date_filter">{html_options options=$date_options selected=$date_select}</select>
   &nbsp;</td>
   <td>&nbsp;
@@ -36,7 +36,7 @@ window.onload=checkReloading;
     <select name="status" onchange="selector_status_drop_list(date_filter.value,status.value,'{$querystring}')" id="status"> {html_options options=$status_options selected=$status_id} </select></td>
   <!-- <td><input type="submit" name="action_result" value="Query"></td> --> 
   <td>&nbsp;
-    Automatisch verversen&nbsp;<input type="checkbox" id="refresh" onclick="toggleAutoRefresh(this);">
+    Auto-refresh&nbsp;<input type="checkbox" id="refresh" onclick="toggleAutoRefresh(this);">
 </tr>
 </table>
 

@@ -22,7 +22,7 @@
 <br>
 <br>
 
-<h1 class="table_data_blue" >Patient: {$patient_name}, Patient ID: {$patient_id}, study description: {$study_description} </h1> 
+<h1 class="table_data_blue" >Patient name: {$patient_name}, Patient ID: {$patient_id}, Study description: {$study_description} </h1> 
 
 <table NOSAVE="true" class="table_general">
   {$series_list}

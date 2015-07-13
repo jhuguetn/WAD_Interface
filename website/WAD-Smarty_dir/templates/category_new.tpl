@@ -15,7 +15,7 @@
 <form enctype="multipart/form-data" action="{$action_new_category}" method="POST" >
 <table>
   <tr>
-    <td class="table_data_blue"> omschrijving</td>
+    <td class="table_data_blue"> description</td>
     <td class="table_data">
          <input   name="description" type="text" value="{$default_description}" size="30"> </input>
     </td>

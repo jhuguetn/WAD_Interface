@@ -69,7 +69,7 @@
     <td colspan="2">
       <table>
 	    <tr>
-          <td colspan="5" align="center" class="table_data_red">Maak een unieke keuze</td>
+          <td colspan="5" align="center" class="table_data_red">Please check only one</td>
         </tr>
         <tr>
           <td class="table_data"> <input type="checkbox" {$checked_login_level_1} name="login_level_1" value="on"> </td>
@@ -86,7 +86,7 @@
     </td>
   </tr>
 </table>
-<font class="table_data_red">* Verplicht veld</font>
+<font class="table_data_red">* Required field</font>
 <hr>
 <input type="submit" name="action" value="{$users_value}">
 </form>

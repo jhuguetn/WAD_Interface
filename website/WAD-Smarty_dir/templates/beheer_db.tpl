@@ -18,7 +18,7 @@
 <body bgcolor="#F3F6FF">
 
 <div data-alert class="alert-box alert">
-    Waarschuwing: wees voorzichtig met handelingen op deze pagina!
+    Warning: Be careful with your actions on this page!
 </div>
 
 <h1 class="table_data_blue" >{$header} </h1>

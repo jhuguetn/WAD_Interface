@@ -16,7 +16,7 @@
 <hr>
 <table>
   <tr>
-    <td class="table_data_blue"> Geef omschrijving waarom resultaat wordt verwijderd </td>
+    <td class="table_data_blue"> Provide a description of why results are deleted </td>
     <td class="table_data">
       <input   name="delete_description" type="text" value="{$default_delete_description}" size="100"> </input>
     </td>

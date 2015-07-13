@@ -13,19 +13,19 @@
 <table class="table_general">
        
         <tr>
-         <td> Voornaam  </td>
+         <td> First Name </td>
          <td> {$default_users_firstname} </td>
         </tr>
         <tr>
-          <td> Initialen </td>
+          <td> Initials </td>
           <td> {$default_users_initials}  </td>
         </tr>
         <tr>
-          <td> Achternaam </td>
+          <td> Last Name </td>
           <td> {$default_users_lastname}  </td>
         </tr>
         <tr>
-          <td> Telefoon </td>
+          <td> Phone </td>
           <td> {$default_users_phone} </td>
         </tr>
         <tr>
@@ -36,7 +36,7 @@
 
 <hr>
 
-<font class="table_data_blue_header">Priveleges</font>
+<font class="table_data_blue_header">Privileges</font>
 <table>
   <tr>
     <td class="table_data_blue"> Login </td>

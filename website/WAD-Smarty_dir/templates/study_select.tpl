@@ -35,7 +35,7 @@
 
 <table class="table_selectorbar">
 <tr bgcolor="#B8E7FF">
-  <td>&nbsp;&nbsp;Selectie
+  <td>&nbsp;&nbsp;Selection
     &nbsp;&nbsp;<select name="transfer_action"><option value="reset">reset</option></select>
     &nbsp;&nbsp;<input type="submit" value="Go!">
   </td>

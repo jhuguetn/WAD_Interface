@@ -39,7 +39,7 @@
 
 <hr>
 
-<font class="table_data_blue_header">Priveleges</font>
+<font class="table_data_blue_header">Privileges</font>
 <table>
   <tr>
     <td class="table_data_blue"> Login </td>

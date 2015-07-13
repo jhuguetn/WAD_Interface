@@ -32,7 +32,7 @@
 <font class="table_data_blue_header">Selector files</font>
 <table> 
   <tr>
-    <td class="table_data_blue"> Analysemodule </td>
+    <td class="table_data_blue"> Analysis module </td>
     <td class="table_data">
          <select name="analysemodule_pk">
            {html_options options=$analysemodule_options selected=$analysemodule_id}
@@ -40,7 +40,7 @@
     </td>
   </tr>
   <tr>
-    <td class="table_data_blue"> Analysemodule config </td>
+    <td class="table_data_blue"> Analysis module config </td>
     <td class="table_data">
          <select name="analysemodule_cfg_pk">
            {html_options options=$analysemodule_cfg_options selected=$analysemodule_cfg_id}

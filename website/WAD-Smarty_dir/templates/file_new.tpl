@@ -27,7 +27,7 @@
     </td>
   </tr>
   <tr>
-    <td class="table_data_blue"> filename pad </td>
+    <td class="table_data_blue"> filename path </td>
     <td class="table_data">
          <input type="hidden" name="MAX_FILE_SIZE" value="1000000000" ></input><input name="uploadedfile" type="file" size="30"></input>
 

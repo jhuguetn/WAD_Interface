@@ -23,10 +23,10 @@
 
 <table class="table_selectorbar">
 <tr bgcolor="#B8E7FF">
-  <td>&nbsp;&nbsp;Selectie
+  <td>&nbsp;&nbsp;Selection
     &nbsp;&nbsp;<select name="transfer_action">
-      <option value="reset_pwd">Wachtwoord reset</option>
-      <option value="delete">User verwijderen</option></select>
+      <option value="reset_pwd">Password reset</option>
+      <option value="delete">Delete user</option></select>
     &nbsp;&nbsp;<input type="submit" value="Go!">
   </td>
 </tr>

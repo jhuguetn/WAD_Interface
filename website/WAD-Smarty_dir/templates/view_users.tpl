@@ -14,19 +14,19 @@
 <table>
        
         <tr>
-         <td class="table_data_blue"> Voornaam  </td>
+         <td class="table_data_blue"> First Name </td>
          <td class="table_data"> {$default_users_firstname} </td>
         </tr>
         <tr>
-          <td class="table_data_blue"> Initialen </td>
+          <td class="table_data_blue"> Initials </td>
           <td class="table_data"> {$default_users_initials}  </td>
         </tr>
         <tr>
-          <td class="table_data_blue"> Achternaam </td>
+          <td class="table_data_blue"> Last Name </td>
           <td class="table_data"> {$default_users_lastname}  </td>
         </tr>
         <tr>
-          <td class="table_data_blue"> Telefoon </td>
+          <td class="table_data_blue"> Phone </td>
           <td class="table_data"> {$default_users_phone} </td>
         </tr>
         <tr>
@@ -37,7 +37,7 @@
 
 <hr>
 
-<font class="table_data_blue_header">Priveleges</font>
+<font class="table_data_blue_header">Privileges</font>
 <table>
   <tr>
     <td class="table_data_blue"> Login </td>
