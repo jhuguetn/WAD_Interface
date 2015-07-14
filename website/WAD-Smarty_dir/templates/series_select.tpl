@@ -11,7 +11,7 @@
 </head>
 <body bgcolor="#F3F6FF">
 
-<button onclick="location.href='status-collector.php';">Terug</button>
+<button onclick="location.href='status-collector.php';">Back</button>
 
 <form action="{$form_action}" method="POST">
 
