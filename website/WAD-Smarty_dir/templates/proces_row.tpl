@@ -7,7 +7,7 @@
      {$patient_name}
   </td>
   <td class="table_data">
-    {$accession_number}
+    {$study_uid}
   </td>
   <td class="table_data">
      {$study_date}
@@ -22,7 +22,7 @@
      {$series_date}
   </td>
   <td class="table_data">
-     {$instance_date}
+     {$series_desc}
   </td>
   <td class="table_data">
     {$selector_name}

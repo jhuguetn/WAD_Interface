@@ -37,8 +37,8 @@ $table_study='study';
 $table_series='series';
 $table_instance='instance';
 
-
-$processor_study_Stmt = "SELECT patient.pat_id AS 'pat_id', patient.pat_name AS 'pat_name', study.accession_no AS 'accession_no', study.study_datetime AS 'study_datetime', selector.name AS 'selector_name', gewenste_processen.creation_time AS 'creation_time', status_omschrijving.veld_omschrijving as 'status_omschrijving'
+#$processor_study_Stmt = "SELECT patient.pat_id AS 'pat_id', patient.pat_name AS 'pat_name', study.accession_no AS 'accession_no', study.study_datetime AS 'study_datetime', selector.name AS 'selector_name', gewenste_processen.creation_time AS 'creation_time', status_omschrijving.veld_omschrijving as 'status_omschrijving'
+$processor_study_Stmt = "SELECT patient.pat_id AS 'pat_id', patient.pat_name AS 'pat_name', study.study_iuid AS 'study_uid', study.study_datetime AS 'study_datetime', selector.name AS 'selector_name', gewenste_processen.creation_time AS 'creation_time', status_omschrijving.veld_omschrijving as 'status_omschrijving'
 FROM patient
 INNER JOIN (
 study inner join (
@@ -53,7 +53,8 @@ where gewenste_processen.pk='%d'
 group by gewenste_processen.pk
 ORDER BY 'creation_time'";
 
-$processor_series_Stmt = "SELECT patient.pat_id AS 'pat_id', patient.pat_name AS 'pat_name', study.accession_no AS 'accession_no', study.study_datetime AS 'study_datetime', selector.name AS 'selector_name', series.modality as 'modality', series.station_name as 'station_name', coalesce(series.pps_start,instance.content_datetime) as 'series_datetime',gewenste_processen.creation_time AS 'creation_time', status_omschrijving.veld_omschrijving as 'status_omschrijving'
+#$processor_series_Stmt = "SELECT patient.pat_id AS 'pat_id', patient.pat_name AS 'pat_name', study.accession_no AS 'accession_no', study.study_datetime AS 'study_datetime', selector.name AS 'selector_name', series.modality as 'modality', series.station_name as 'station_name', coalesce(series.pps_start,instance.content_datetime) as 'series_datetime',gewenste_processen.creation_time AS 'creation_time', status_omschrijving.veld_omschrijving as 'status_omschrijving'
+$processor_series_Stmt = "SELECT patient.pat_id AS 'pat_id', patient.pat_name AS 'pat_name', study.study_iuid AS 'study_uid', study.study_datetime AS 'study_datetime', selector.name AS 'selector_name', series.series_desc as 'series_desc', series.modality as 'modality', series.station_name as 'station_name', coalesce(series.pps_start,instance.content_datetime) as 'series_datetime',gewenste_processen.creation_time AS 'creation_time', status_omschrijving.veld_omschrijving as 'status_omschrijving'
 FROM patient
 INNER JOIN (
 study inner join (
@@ -72,7 +73,8 @@ and instance.series_fk=series.pk
 group by gewenste_processen.pk
 ORDER BY 'creation_time'";
 
-$processor_instance_Stmt = "SELECT patient.pat_id AS 'pat_id', patient.pat_name AS 'pat_name', study.accession_no AS 'accession_no', study.study_datetime AS 'study_datetime', selector.name AS 'selector_name', series.modality as 'modality', series.station_name as 'station_name', coalesce(series.pps_start,instance.content_datetime) as 'series_datetime', instance.content_datetime as 'instance_datetime', gewenste_processen.creation_time AS 'creation_time', status_omschrijving.veld_omschrijving as 'status_omschrijving'
+#$processor_instance_Stmt = "SELECT patient.pat_id AS 'pat_id', patient.pat_name AS 'pat_name', study.accession_no AS 'accession_no', study.study_datetime AS 'study_datetime', selector.name AS 'selector_name', series.modality as 'modality', series.station_name as 'station_name', coalesce(series.pps_start,instance.content_datetime) as 'series_datetime', instance.content_datetime as 'instance_datetime', gewenste_processen.creation_time AS 'creation_time', status_omschrijving.veld_omschrijving as 'status_omschrijving'
+$processor_instance_Stmt = "SELECT patient.pat_id AS 'pat_id', patient.pat_name AS 'pat_name', study.study_iuid AS 'study_uid', study.study_datetime AS 'study_datetime', selector.name AS 'selector_name', series.series_desc as 'series_desc', series.modality as 'modality', series.station_name as 'station_name', coalesce(series.pps_start,instance.content_datetime) as 'series_datetime', gewenste_processen.creation_time AS 'creation_time', status_omschrijving.veld_omschrijving as 'status_omschrijving'
 FROM patient
 INNER JOIN (
 study inner join (
@@ -218,7 +220,8 @@ while ($field_gewenste_processen = $result_gewenste_processen->fetch_object())
        $table_data->assign("checkbox_name",$checkbox_name);
        $table_data->assign("patient_id",$field_processor_study->pat_id);
        $table_data->assign("patient_name",$field_processor_study->pat_name);
-       $table_data->assign("accession_number",$field_processor_study->accession_no);
+       #$table_data->assign("accession_number",$field_processor_study->accession_no);
+	   $table_data->assign("study_uid",$field_processor_study->study_uid);
        $table_data->assign("study_date",$field_processor_study->study_datetime);
        $table_data->assign("selector_name",$field_processor_study->selector_name);
        $table_data->assign("proces_date",$field_processor_study->creation_time);
@@ -256,12 +259,14 @@ while ($field_gewenste_processen = $result_gewenste_processen->fetch_object())
        $table_data->assign("checkbox_name",$checkbox_name);
        $table_data->assign("patient_id",$field_processor_series->pat_id);
        $table_data->assign("patient_name",$field_processor_series->pat_name);
-       $table_data->assign("accession_number",$field_processor_series->accession_no);
-       $table_data->assign("study_date",$field_processor_series->study_datetime);
+       #$table_data->assign("accession_number",$field_processor_series->accession_no);
+	   $table_data->assign("study_uid",$field_processor_series->study_uid);
+	   $table_data->assign("study_date",$field_processor_series->study_datetime);
        $table_data->assign("modality",$field_processor_series->modality);
        $table_data->assign("station_name",$field_processor_series->station_name);
        $table_data->assign("series_date",$field_processor_series->series_datetime);
-       $table_data->assign("selector_name",$field_processor_series->selector_name);
+	   $table_data->assign("series_desc",$field_processor_series->series_desc);
+	   $table_data->assign("selector_name",$field_processor_series->selector_name);
        $table_data->assign("proces_date",$field_processor_series->creation_time);
        if ($field_processor_series->status_omschrijving=="Error") {
           $table_data->assign("proces_status","<a target='blank' href='show_processor_log.php?pk=".$field_gewenste_processen->pk."'>Error</a>");
@@ -296,13 +301,15 @@ while ($field_gewenste_processen = $result_gewenste_processen->fetch_object())
        $table_data->assign("checkbox_name",$checkbox_name);
        $table_data->assign("patient_id",$field_processor_instance->pat_id);
        $table_data->assign("patient_name",$field_processor_instance->pat_name);
-       $table_data->assign("accession_number",$field_processor_instance->accession_no);
+       #$table_data->assign("accession_number",$field_processor_instance->accession_no);
+	   $table_data->assign("study_uid",$field_processor_instance->study_uid);
        $table_data->assign("study_date",$field_processor_instance->study_datetime);
        $table_data->assign("modality",$field_processor_instance->modality);
        $table_data->assign("station_name",$field_processor_instance->station_name);
        $table_data->assign("series_date",$field_processor_instance->series_datetime);
-       $table_data->assign("instance_date",$field_processor_instance->instance_datetime);  
-       $table_data->assign("selector_name",$field_processor_instance->selector_name);
+       #$table_data->assign("instance_date",$field_processor_instance->instance_datetime);  
+	   $table_data->assign("series_desc",$field_processor_instance->series_desc);  
+	   $table_data->assign("selector_name",$field_processor_instance->selector_name);
        $table_data->assign("proces_date",$field_processor_instance->creation_time);
        if ($field_processor_instance->status_omschrijving=="Error") {
           $table_data->assign("proces_status","<a target='blank' href='show_processor_log.php?pk=".$field_gewenste_processen->pk."'>Error</a>");
