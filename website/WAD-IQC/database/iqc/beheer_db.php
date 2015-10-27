@@ -7,13 +7,14 @@ require("./php/includes/setup.php");
 $main_page = new Smarty_NM();
 
 
-$db_action_list['0'] = 'Kies een actie uit de lijst...';
-$db_action_list['1'] = 'Verwijder alle resultaten voor een specifieke selector';
+$db_action_list['0'] = 'Choose an action from the list...';
+$db_action_list['1'] = 'Remove all results for a specific selector';
 //$db_action_list['2'] = 'Herstel IQC-database naar "fabrieksinstellingen"';
-$db_action_list['3'] = 'Verwijder studies/series zonder entry in gewenste processen tabel';
-$db_action_list['4'] = 'Verwijder patienten/studies/series zonder entry in gewenste processen tabel';
-$db_action_list['5'] = 'Verwijder gewenste processen zonder resultaten';
+$db_action_list['3'] = 'Remove studies/series without entry in the table of queued processes';
+$db_action_list['4'] = 'Remove patients/studies/series without entry in the table of queued processes';
+$db_action_list['5'] = 'Remove queued processes without results';
 //$db_action_list['6'] = 'Verwijder specifiek gewenst proces incl resultaten';
+
 
 
 

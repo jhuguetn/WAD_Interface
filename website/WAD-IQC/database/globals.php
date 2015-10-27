@@ -112,17 +112,18 @@ $analyselevel_list['series']='series';
 $analyselevel_list['instance']='instance';
 
 $groups_list['0'] = '';
-$groups_list['1'] = 'categorie';
-$groups_list['2'] = 'modaliteit';
-$groups_list['3'] = 'lokatie';
+$groups_list['1'] = 'category';
+$groups_list['2'] = 'modality';
+$groups_list['3'] = 'location';
 
 $qc_frequency_list['NULL']='';
-$qc_frequency_list['1']='dagelijks';
-$qc_frequency_list['7']='wekelijks';
-$qc_frequency_list['14']='tweewekelijks';
-$qc_frequency_list['30']='maandelijks';
-$qc_frequency_list['91']='kwartaal';
-$qc_frequency_list['365']='jaarlijks';
+$qc_frequency_list['1']='daily';
+$qc_frequency_list['7']='weekly';
+$qc_frequency_list['14']='biweekly';
+$qc_frequency_list['30']='monthly';
+$qc_frequency_list['91']='quarterly';
+$qc_frequency_list['365']='yearly';
+
 
 
 //mail settings
